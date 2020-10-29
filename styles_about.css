@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+body{
+    color: #333638;
+    font-family: 'Merriweather', serif;
+    background-color: white;
+    text-align: center;
+}
+
+.parent {
+    display: grid;
+    grid-template: 15px 230px 90px 1fr 50px / auto;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-template-areas:
+        "nav"
+        "header"
+        "subtitle"
+        "main"
+        "footer"
+}
+
+nav {
+    grid-area: nav;
+    justify-self: center;
+    align-self: start;
+    margin: 0;
+}
+
+
+.navigation-menu ul {
+    list-style: none;
+}
+
+.navigation-menu li {
+    display: inline-flex;
+    padding: 15px;
+}
+
+.navigation-menu li a:hover {
+    color: grey;
+}
+
+li, a {
+    font-family: 'Merriweather';
+    font-weight: 300;
+    font-size: xx-small;
+    color: #333638;
+    text-decoration: none;
+}
+
+header {
+    font-size: 35px;
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    grid-area: header;
+    align-self: end;
+}
+
+.subtitle {
+    grid-area: subtitle;
+    margin-bottom: 30px;
+    color: gray;
+}
+
+.subtitle h1 {
+    font-size: 20px; 
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template: 300px 1fr / 5px 270px 5px;
+    grid-template-areas: 
+        ". figure ."
+        ". p .";
+    justify-items: center;
+    row-gap: 40px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    margin-left: 100px;
+}
+
+figure {
+    grid-area: figure;
+    align-self: center;
+}
+
+figure img {
+    height: 330px;
+    width: 270px;
+}
+
+main p {
+    grid-area: p;
+    align-self: center;
+}
+
+
+footer {
+    grid-area: footer;
+    justify-self: stretch;
+    color: white;
+    background-color: #7c8764;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media screen and (min-width:768px){
+    main {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+        margin-left: 150px;
+        margin-right: 130px;
+        margin-bottom: 130px;
+    }
+
+    figure {
+        grid-area: figure;
+        align-self: center;
+    }
+
+    main p {
+        flex-basis: 50%;
+    }
+    
+    figure img {
+        height: 440px;
+        width: 370px;
+    }
+
+
+
+
+    
+
+}

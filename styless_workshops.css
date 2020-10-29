@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+body{
+    color: #333638;
+    font-family: 'Merriweather', serif;
+    background-color: white;
+    text-align: center;
+}
+
+.parent {
+    display: grid;
+    grid-template: 15px 230px 90px auto 250px 50px / 8px auto 15px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-template-areas:
+        ". nav ."
+        ". header ."
+        ". subtitle ."
+        ". main ."
+        ". aside ."
+        "footer footer footer"
+}
+
+nav {
+    grid-area: nav;
+    justify-self: center;
+    align-self: start;
+    margin: 0;
+}
+
+.navigation-menu ul {
+    list-style: none;
+}
+
+.navigation-menu li {
+    display: inline-flex;
+    padding: 15px;
+    
+}
+
+.navigation-menu li a:hover {
+    color: grey;
+}
+
+li, a {
+    font-family: 'Merriweather';
+    font-weight: 300;
+    font-size: xx-small;
+    color: #333638;
+    text-decoration: none;
+}
+
+header {
+    font-size: 35px;
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    grid-area: header;
+    align-self: end;
+}
+
+.subtitle {
+    grid-area: subtitle;
+    margin-bottom: 30px;
+    color: gray;
+}
+
+.subtitle h1 {
+    font-size: 21px; 
+}
+
+main {
+    grid-area: main;
+}
+
+main {   
+    display: grid;
+    grid-template: repeat(3,370px 190px 30px 30px) / 20px 340px 20px;
+    row-gap: 15px;
+    grid-template-areas: 
+    ". foto1 ."
+    ". link1 ."
+    ". button1 ."
+    ". . ."
+    ". foto2 ."
+    ". link2 ."
+    ". button2 ."
+    ". . ."
+    ". foto3 ."
+    ". link3 ."
+    ". button3 ."
+    ". . .";
+    justify-content: center;
+    justify-items: center;
+}
+
+.link1 {
+    grid-area: link1;
+    justify-self: start;
+    text-align: start;
+    padding-top: 10px;
+    
+}
+
+.foto1 {
+    grid-area: foto1;
+    justify-self: center;
+    
+}
+
+.button1 {
+    grid-area: button1;
+    justify-self: start;
+}
+
+.link2 {
+    grid-area: link2;
+    justify-self: start;
+    text-align: start;
+    padding-top: 10px;
+}
+
+.foto2 {
+    grid-area: foto2;
+    justify-self: center;
+}
+
+.button2 {
+    grid-area: button2;
+    justify-self: start;
+}
+
+.link3 {
+    grid-area: link3;
+    justify-self: start;
+    text-align: start;
+    padding-top: 10px;
+}
+
+.foto3 {
+    grid-area: foto3;
+    justify-self: center;
+}
+
+.button3 {
+    grid-area: button3;
+    justify-self: start;
+}
+
+button {
+    color: white;
+    background-color: goldenrod;
+    border-color: goldenrod;
+    font-family: 'Merriweather',serif;
+    font-size: 1rem;
+    text-align: center;
+}
+
+img {
+    width: 295px;
+    height: 370px;
+}
+
+main a p {
+    font-size: 13px;
+}
+
+aside {
+    grid-area: aside;
+    justify-self: center;
+}
+
+.green-border {
+    color: white;
+    border: none; 
+    height: 170px;
+    width: 430px;
+    background-color: #7c8764;
+    padding: 12px;
+}
+
+input {
+    width: 45%;
+    max-width: 425px;
+    padding: 0.8em;
+    font-size: 0.9em;
+    font-family: sans-serif;
+
+    outline: none;
+    border-radius: 4px;
+    border-style: inset;
+    border-width: 1px;
+    border-color: lightgray;
+    background-color: #f9f9f9;
+
+}
+
+footer {
+    grid-area: footer;
+    justify-self: stretch;
+    color: white;
+    background-color: #333638;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+@media screen and (min-width:768px){
+    .parent {
+        display: grid;
+        grid-template: 15px 230px 90px auto 250px 50px / 50px auto 50px;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        grid-template-areas:
+            ". nav ."
+            ". header ."
+            ". subtitle ."
+            ". main ."
+            ". aside ."
+            "footer footer footer"
+    }
+    main {
+        grid-area: main;
+        align-self: center;
+        display: grid;
+        grid-template: 370px 190px 30px 30px / repeat(3,310px);
+        justify-content: center;
+        justify-items: center;
+        column-gap: 70px;
+        row-gap: 25px;
+        grid-template-areas: 
+        "foto1 foto2 foto3"
+        "link1 link2 link3"
+        "button1 button2 button3";
+        justify-content: center;
+    }
+
+    aside {
+        justify-self: center;
+    }
+
+    .green-border {
+        color: white;
+        border: none; 
+        height: 130px;
+        width: 1000px;
+        padding: 30px;
+        background-color: #7c8764;
+    }
+
+    input {
+        width: 35%;
+        max-width: 425px;
+        padding: 0.8em;
+        font-size: 0.9em;
+
+    }
+
+}
+
